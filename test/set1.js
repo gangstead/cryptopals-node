@@ -55,7 +55,7 @@ describe('set 1', () => {
         .to.equal(37);
     });
 
-    it.only('should break repeating key XOR', () => {
+    it('should break repeating key XOR', () => {
       const breakRepeatingKeyXor = require('../lib/break-repeating-key-xor');
       const file = fs.readFileSync('./test/data/challenge6.txt'); // eslint-disable-line no-sync
       expect(breakRepeatingKeyXor(file).indexOf("I'm back and I'm ringin' the bell"))
